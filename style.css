@@ -1,0 +1,226 @@
+body 
+{
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdf6f0;
+  color: #3e2723;
+}
+
+.sidebar   /*меню*/
+{   
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #3e2723;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.08);
+  z-index: 1000;
+}
+
+.logo 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 36px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.logo img 
+{
+  width: 110px;
+  border-radius: 50%;
+}
+
+.logo h1 
+{
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.nav-menu 
+{
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.nav-menu li 
+{
+  margin: 18px 0;
+}
+
+.nav-menu a 
+{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 8px 0;
+  transition: background-color 0.25s, transform 0.15s;
+}
+
+.nav-menu a:hover 
+{
+  background-color: #6d4c41;
+  transform: translateX(6px);
+}
+
+.content /*контент*/
+{
+  margin-left: 220px;
+  background-color: #fdf6f0;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+.hero /*банер*/
+{
+  text-align: center;
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after 
+{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero h2, .hero p 
+{
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 
+{
+  font-size: 2.5em;
+  animation: fadeIn 1.8s ease;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.section 
+{
+  padding: 48px 20px;
+  text-align: center;
+}
+
+.section h2 
+{
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #4e342e;
+}
+
+.product-list /*товари*/
+{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.product-card 
+{
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  width: 250px; 
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 400px; 
+  transition: transform 0.28s, box-shadow 0.28s;
+}
+
+.product-card:hover 
+{
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img 
+{
+  width: 100%;
+  height: 240px; 
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.product-card h3 
+{
+  margin: 4px 0;
+  color: #3b2a24;
+  font-size: 1.05rem;
+}
+
+.product-card p 
+{
+  margin: 4px 0 6px 0;
+  color: #6b574f;
+  font-size: 0.94rem;
+  line-height: 1.3;
+}
+
+.price 
+{
+  margin-top: 4px;
+  font-weight: 700;
+  color: #4e342e;
+}
+
+footer 
+{
+  width: 100%;
+  background-color: #4e342e;
+  color: white;
+  padding: 28px 0;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.06);
+}
+
+.footer-inner 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+  margin-left: 220px;
+  max-width: calc(100% - 220px);
+  padding: 0 20px;
+}
+
+.footer-inner a 
+{
+  color: #f8d7d0;
+  text-decoration: underline;
+}
+
