@@ -1,72 +1,229 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>CoffeeLand</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>CoffeeLand</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-  <header class="sidebar">
-    <div class="logo">
-      <img src="images/logo.png">
-      <h1>CoffeeLand</h1>
-    </div>
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="#home">🏠 Головна</a></li>
-        <li><a href="#products">☕ Товари</a></li>
-        <li><a href="#about">ℹ️ Про нас</a></li>
-        <li><a href="#contacts">📞 Контакти</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="content">
-    <main>
-      <section id="home" class="hero">
-        <h2>Смак справжньої кави кожного дня</h2>
-        <p>Обирай свою улюблену каву з CoffeeLand</p>
-      </section>
-
-      <section id="products" class="section">
-        <h2>Наші товари</h2>
-        <div class="product-list">
-          <article class="product-card">
-            <img src="images/coffee1.jpg" alt="Arabica Premium">
-            <h3>Arabica Premium</h3>
-            <p>Ніжний смак з нотками темного шоколаду.</p>
-            <span class="price">250 грн</span>
-          </article>
-
-          <article class="product-card">
-            <img src="images/coffee2.jpg" alt="Espresso Blend">
-            <h3>Espresso Blend</h3>
-            <p>Ідеальний для кавомашини або турки.</p>
-            <span class="price">220 грн</span>
-          </article>
-
-          <article class="product-card">
-            <img src="images/coffee3.jpg" alt="Colombian Roast">
-            <h3>Colombian Roast</h3>
-            <p>Багатий аромат з легкою кислинкою.</p>
-            <span class="price">280 грн</span>
-          </article>
+    <div class="header-top">
+        <div class="logo">
+            <img src="images/logo.png" alt="CoffeeLand logo" width="40" height="40">
+            <h1>CoffeeLand</h1>
         </div>
-      </section>
-
-      <section id="about" class="section">
-        <h2>Про нас</h2>
-        <p>Ми — команда любителів кави, які обирають лише найкращі зерна з усього світу. CoffeeLand пропонує свіжообсмажену каву, яку ми доставляємо прямо до вашої чашки ☕</p>
-      </section>
-    </main>
-  </div> 
-
-  <footer id="contacts">
-    <div class="footer-inner">
-      <p>© 2025 CoffeeLand | Email: <a href="mailto:info@coffeeland.ua">info@coffeeland.ua</a></p>
-      <p>Instagram: <a href="https://instagram.com/coffeeland" target="_blank">@coffeeland</a></p>
+        <div class="show-menu" tabindex="0">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </div>
-  </footer>
+
+    <div class="hidden-menu">
+        <div class="close" tabindex="0">
+            <i class="fa-regular fa-circle-xmark"></i>
+        </div>
+        <h2>Меню</h2>
+        <ul>
+            <li><a href="#home"><i class="fa-solid fa-house"></i>Головна</a></li>
+            <li><a href="#products"><i class="fa-solid fa-coffee"></i>Товари</a></li>
+            <li><a href="#gallery"><i class="fa-solid fa-image"></i>Галерея</a></li>
+            <li><a href="#calculator"><i class="fa-solid fa-calculator"></i>Калькулятор</a></li>
+            <li><a href="#about"><i class="fa-solid fa-info-circle"></i>Про нас</a></li>
+            <li><a href="#feedback"><i class="fa-solid fa-comment-dots"></i>Зворотний зв’язок</a></li>
+            <li><a href="#contacts"><i class="fa-solid fa-envelope"></i>Контакти</a></li>
+        </ul>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="content">
+        <main>
+
+            <section id="home" class="hero">
+                <h2>Смак справжньої кави кожного дня</h2>
+                <p>Обирай свою улюблену каву з CoffeeLand!</p>
+            </section>
+
+            <section class="slider-section">
+                <div class="slider">
+                    <div class="item"><img src="images/slider1.jpg"></div>
+                    <div class="item"><img src="images/slider2.jpg"></div>
+                    <div class="item"><img src="images/slider3.jpg"></div>
+                    <div class="item"><img src="images/slider4.jpg"></div>
+                    <div class="item"><img src="images/slider5.jpg"></div>
+
+                    <a class="previous" onclick="previousSlide()">&#10094;</a>
+                    <a class="next" onclick="nextSlide()">&#10095;</a>
+                </div>
+            </section>
+
+            <section id="products" class="section">
+                <h2>Наші товари</h2>
+                <div class="product-list">
+                    <article class="product-card">
+                        <img src="images/coffee1.jpg">
+                        <h3>Arabica Premium</h3>
+                        <p>Ніжний смак з нотками темного шоколаду.</p>
+                        <span class="price">250 грн</span>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="images/coffee2.jpg">
+                        <h3>Espresso Blend</h3>
+                        <p>Ідеальний для кавомашини або турки.</p>
+                        <span class="price">150 грн</span>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="images/coffee3.jpg">
+                        <h3>Colombian Roast</h3>
+                        <p>Багатий аромат з легкою кислинкою.</p>
+                        <span class="price">280 грн</span>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="images/coffee4.jpg">
+                        <h3>Robusta Strong</h3>
+                        <p>Міцний і енергійний бленд.</p>
+                        <span class="price">200 грн</span>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="images/coffee5.jpg">
+                        <h3>Latte 057</h3>
+                        <p>М'який смак для латте.</p>
+                        <span class="price">300 грн</span>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="images/coffee6.jpg">
+                        <h3>Decaf Delight</h3>
+                        <p>Без кофеїну, але з повним смаком.</p>
+                        <span class="price">270 грн</span>
+                    </article>
+                </div>
+            </section>
+
+
+            <section id="gallery" class="section">     <!--галерея-->
+               <h2>Галерея CoffeeLand</h2>
+
+                 <div id="loader" class="loader"></div>
+                 <div id="gallery-container" class="gallery"></div>
+             </section>
+
+                 <div id="gallery-modal" class="modal">  <!--велике зображення для галереї-->
+                     <div class="modal-content">
+                       <span class="modal-close" id="gallery-close">&times;</span>
+                       <img id="gallery-large-img" src="" alt="Large image">
+                     </div>
+                 </div>
+
+
+            <section id="calculator" class="section calculator">    <!--калькулятор-->
+              <h2>Калькулятор замовлення ☕</h2>
+
+               <div class="calculator-box">            
+                 <label>
+                     Кількість позицій:
+                    <input type="number" id="totalItems" min="1" max="6" value="1">
+                 </label>
+
+                   <div class="calculator-buttons">
+                     <button id="showFormBtn">Показати форми</button>
+                     <button id="calcBtn">Розрахувати</button>
+                     <button id="resetBtn">Очистити</button>
+                   </div>
+
+                    <div id="itemInputs"></div>
+
+                    <div id="calcResult" class="calc-result"></div>
+                </div>
+            </section>
+
+
+            <section id="about" class="section">
+                <h2>Про нас</h2>
+                <p>
+                    Ми — команда любителів кави, які обирають лише найкращі зерна з усього світу.
+                    CoffeeLand пропонує свіжообсмажену каву ☕
+                </p>
+            </section>
+
+            <section id="feedback" class="section">
+                <h2>Зворотний зв’язок</h2>
+
+                <form id="feedback-form" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="firstName" placeholder="Ім'я">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="lastName" placeholder="Прізвище">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="phone" placeholder="Телефон">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="comment" placeholder="Коментар"></textarea>
+                    </div>
+                    <button type="submit">Надіслати</button>
+                </form>
+
+                <ul id="error-list"></ul>
+            </section>
+
+        </main>
+    </div>
+
+    <footer id="contacts">
+        <div class="footer-inner">
+            <p>© 2025 CoffeeLand | Email:
+                <a href="mailto:info@coffeeland.ua">info@coffeeland.ua</a>
+            </p>
+            <p>Instagram:
+                <a href="https://instagram.com/coffeeland" target="_blank">@coffeeland</a>
+            </p>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">   <!--модал-->
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+
+            <div id="modal-contact" class="modal-body"> <!--контакти-->
+                <h2>Зв’язатися з нами</h2>
+                <form id="modal-form" class="modal-form" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="modal-firstName" placeholder="Ім'я">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="modal-lastName" placeholder="Прізвище">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="modal-email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="modal-phone" placeholder="Телефон">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="modal-message" placeholder="Повідомлення"></textarea>
+                    </div>
+                    <button type="submit">Надіслати</button>
+                </form>
+                <ul id="modal-error-list"></ul>
+            </div>
+
+            <div id="modal-product" class="modal-body"> <!--товар-->
+                <img id="modal-img">
+                <h3 id="modal-title"></h3>
+                <p id="modal-desc"></p>
+                <span id="modal-price"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
